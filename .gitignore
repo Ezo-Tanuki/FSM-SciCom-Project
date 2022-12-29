@@ -1,0 +1,6 @@
+#Output files
+*.exe
+*.out
+
+#vs config
+.vscode
