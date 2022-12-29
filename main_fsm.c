@@ -24,7 +24,7 @@ int main(void){
 
 
 void calcState(int* nextState, int* currentState, int* input){
-    nextState[0] = currentState[0] & !currentState[1] | currentState[0] & input[1] | currentState[1] & input[0] | !currentState[0] & input[0];
+    nextState[0] = currentState[0] & !currentState[1] | currentState[0] & input[1] | input[0];
     nextState[1] = !currentState[0] & currentState[1] | input[1] | currentState[1] & input[0];
 }
 
