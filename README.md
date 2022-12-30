@@ -17,10 +17,11 @@ Now let input $i$ and output $o$ be a string with length of 2 that consist of 1'
 
 Each state from the left bit to the right representing the avaibility of the ink and paper respectively where 1 means available and 0 is not, you will also notice that the output is the flipped version of the current state where the 1 swapped with 0 and vice versa. Drawing the FSM will looks like the picture below:
 ![img](img/fsm-img1.png)
+(note: the image should contain an arrow pointing to $q_0$ signifying the starting point, however I forget to put it in, sorry.)
 Each state has it owns meaning which i will start explaining from here.
 <br>
 ## Explaination
-The state is representated with 2 bits of 0 and 1 each representing the availability of ink of paper so the left bit or MSB represents the ink while the right bit or LSB represents the paper
+The state is representated with 2 bits of 0 and 1 each representing the availability of ink of paper so the left bit or MSB represents the ink while the right bit or LSB represents the paper, also the starting state if my FSM is $q_0$
 ![img](img/fsm-img2.png)
 
 The input $i$ acts as a supply, so if you put in "01" as the input it means "add paper to the printer", if you put "10" as the input then it means "add ink to the printer", and if you put "11" it means "add ink and paper to the printer", but if you put "00" as the input it will try to print which will run successfully if and only if both the paper and the ink is supplied
@@ -42,7 +43,7 @@ Using the table for transition state we can make the karnaugh map below: (note: 
 ![img](img/KarnaughQ1.png)
 
 ## Calculating
-Now to change it into the code we can express the $Q_0$ as an array like the snipper below:
+Now to change it into the code we can express the $Q_0$ as an array like the snippet below:
 ```c
 nextState[0] = currentState[0] & !currentState[1] | currentState[0] & input[1] | input[0];
 ```
