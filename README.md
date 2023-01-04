@@ -23,7 +23,7 @@ Now let input $i$ and output $o$ be a string with length of 2 that consist of 1'
   <tr>
     <th rowspan="2">q<sub>n</sub><br>(current state)</th>
     <th rowspan="2">s<sub>n</sub><br>(bit representation)</th>
-    <th colspan="4">Next State</th>
+    <th colspan="4">Next State (Q<sub>n</sub>)</th>
     <th rowspan="2">o</th>
   </tr>
   <tr>
@@ -76,6 +76,7 @@ Now let input $i$ and output $o$ be a string with length of 2 that consist of 1'
 
 Drawing the FSM Diagram it will look like the picture below:
 ![img](img/fsm-diagram.svg)
+
 The output for each state is the  flipped version of the current state bit representation
 |$q_n$|$s_n$|$o_n$|
 |:---:|:---:|:---:|
