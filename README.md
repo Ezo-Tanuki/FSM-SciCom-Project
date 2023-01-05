@@ -10,6 +10,15 @@ The following code is my FSM project simulating a printer process in C. The numb
 Now the two bits representation denotes the avaibility of the ink and paper respectively where 1 means available and 0 is not, look the figure below which is the state representation of $q_0$:
 ![img](img/explanation1.png) 
 
+Now if we extend the definition to the rest state we will get the table below
+
+|$q_n$|$s_n$|Ink|Paper|
+|-----|-----|---|-----|
+|$q_0$|00   |Empty|Empty|
+|$q_1$|01   |Empty|Available|
+|$q_2$|10   |Available|Empty|
+|$q_3$|11   |Available|Available|
+
 Now let input $i$ and output $o$ be a string with length of 2 that consist of 1's and 0's, now the transition state function for my FSM looks like the table below
 
 <!-- |$q_n$|$s_n$|$i$ = 00|$i$ = 01|$i$ = 10|$i$ = 11|$o$|
