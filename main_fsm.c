@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void calcState(int* nextState, int* currentState, int* input);
 void calcOutput(int* output, int* currentState);
@@ -6,15 +7,20 @@ void printOutput(int* output);
 void printCurrentState(int* currentState);
 
 int main(void){
+    system("clear");
+
     int input2Bit[2];
     int currentState[] = {0, 0};
+    int output[2] = {1, 1};
     int nextState[2];
-    int output[2];
+    
     printOutput(output);
     printCurrentState(currentState);
 
     while(1){    
         scanf("%d %d", input2Bit, input2Bit+1);
+
+        system("clear");
         calcState(nextState, currentState, input2Bit);
         currentState[0] = nextState[0];
         currentState[1] = nextState[1];
@@ -41,6 +47,7 @@ void calcOutput(int* output, int* currentState){
 void printOutput(int* output){
     if(!output[0] & !output[1]){
         printf(
+        "\n"
         ",----,------------------------------,------.\n"
         "| \033[0;32m##\033[0m |                              |    - |\n"
         "| \033[0;32m##\033[0m |                              |    - |\n"
@@ -55,6 +62,7 @@ void printOutput(int* output){
 
     else if(output[0] & !output[1]){
         printf(
+        "\n"
         ",----,------------------------------,------.\n"
         "| \033[0;32m##\033[0m |                              |    - |\n"
         "| \033[0;32m##\033[0m |                              |    - |\n"
@@ -68,6 +76,7 @@ void printOutput(int* output){
     } 
     else if(!output[0] & output[1]){
         printf(
+        "\n"
         "   \033[0;31mPaper is empty!\033[0m\n"
         ",----,------------------------------,------.\n"
         "| \033[0;31m##\033[0m |                              |    - |\n"
