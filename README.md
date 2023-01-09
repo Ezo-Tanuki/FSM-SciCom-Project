@@ -162,3 +162,10 @@ During the running process the program will start from the state $q_0$ which in 
 0 0
 ```
 depending from the input you will get feedback which depends from the output which is just the flipped version of the current state.
+
+## Demonstratiob
+
+
+
+https://user-images.githubusercontent.com/114067365/211320600-3a93ff4a-cd47-41dd-b5ba-4bf139695899.mp4
+
