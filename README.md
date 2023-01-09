@@ -163,7 +163,7 @@ During the running process the program will start from the state $q_0$ which in 
 ```
 depending from the input you will get feedback which depends from the output which is just the flipped version of the current state.
 
-## Demonstratiob
+## Demonstration
 
 
 
