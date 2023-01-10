@@ -120,4 +120,6 @@ void printCurrentState(int* currentState){
   |    ||___                      ___||    ##|
   |    ||---`--------------------'---||      |
   `--mb'|_|______________________==__|`------'
+  Artist: Martin Brunzel
+  Source: https://ascii.co.uk/art/printer
 */
