@@ -106,15 +106,18 @@ Now for the input $i$ each input has its own meaning, look the table below:
 Now if your refer to the image of my FSM diagram you will notice that the printer only prints if both the ink and the paper is available and when the "print" process is executed successfully the paper and ink supply will be gone. Below is the complete diagram for my FSM:
 
 ![img](img/fsm-guide.png)
+
 ![img](img/fsm-diagram-detailed.svg)
 
 ## Karnaugh Map
 Using the table for transition state we can make the karnaugh maps like below:
 
 Next state (Q0)
+
 ![img](img/Q0-kmap.png)
 
 Next state (Q1)
+
 ![img](img/Q1-kmap.png)
 
 With both karnaugh map I derived the equation for the next state
