@@ -103,28 +103,26 @@ Now for the input $i$ each input has its own meaning, look the table below:
 |10 |fill up the ink tank to the printer|
 |11 |fill up both the paper and the ink tank to the printer|
 
-Now if your refer to the image of my FSM diagram you will notice that the printer only prints if both the ink and the paper is available and when the "print" process is executed successfully the paper and ink supply will be gone.
-<!-- ## Explanation
-The state is representated with 2 bits of 0 and 1 each representing the availability of ink of paper so the left bit or MSB represents the ink while the right bit or LSB represents the paper, also the starting state if my FSM is $q_0$
-![img](img/fsm-img2.png)
+Now if your refer to the image of my FSM diagram you will notice that the printer only prints if both the ink and the paper is available and when the "print" process is executed successfully the paper and ink supply will be gone. Below is the complete diagram for my FSM:
 
-The input $i$ acts as a supply, so if you put in "01" as the input it means "add paper to the printer", if you put "10" as the input then it means "add ink to the printer", and if you put "11" it means "add ink and paper to the printer", but if you put "00" as the input it will try to print which will run successfully if and only if both the paper and the ink is supplied
-![img](img/fsm-img3.png)
-Lastly, the output $o$ only represents what material is insufficient (left bit for ink, right bit for paper) for the printer which is why the output is just the flipped version of the input $i$
-|$i$|$o$|
-|:-:|:-:|
-|00 |11 |
-|01 |10 |
-|10 |01 |
-|11 |00 |
-
-So my machine will read the output from the left to right and if the machine reads the bit 1 it will prompt the user to fill up the ink or paper. -->
+![img](img/fsm-guide.png)
+![img](img/fsm-diagram-detailed.svg)
 
 ## Karnaugh Map
-Using the table for transition state we can make the karnaugh map below: (note: $Q_n$ denotes the next state of $n$-nth bit from the left or MSB)
-![img](img/KarnaughQ0.png)
+Using the table for transition state we can make the karnaugh maps like below:
 
-![img](img/KarnaughQ1.png)
+Next state (Q0)
+![img](img/Q0-kmap.png)
+
+Next state (Q1)
+![img](img/Q1-kmap.png)
+
+With both karnaugh map I derived the equation for the next state
+
+$$Q_0 = S_0S_1' + S_0I_1 + I_0$$
+
+$$Q_1 = S_0'S_1+I_1+S_1I_0$$ 
+
 
 ## Calculating
 Now to convert the boolean equations above into the code we can express the $Q_n$ as an array like the snippet below:
